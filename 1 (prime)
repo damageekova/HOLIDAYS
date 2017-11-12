@@ -1,0 +1,52 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main(){
+int n;
+cout<<"Enter the number of elements  ";
+cin>>n;
+int a [n];
+for(int i=0;i<n;i++){
+cout<<"Enter the element  ";
+cin >> a[i];
+}
+int k = 0;
+int g[k];
+int c = 0;
+int yu=0;
+    for(int i = 0; i < n; i++){
+       for(int j =i+1; j < n; j++){
+           if(i != j && a[i] == a[j])
+                 yu=1;
+       if(yu==1){
+            g[k] = a[i];
+            k++;
+            c++;
+          }
+    }
+    }
+cout<<"Array without repeats  "<<endl;
+int d=n-c+1;
+for (int i=0; i<d; i++){
+cout<<g[i]<<endl;
+}
+cout<<"d= "<<d<<endl;
+int p[d];
+bool pr;
+for (int i=2; i<(g[i]/2); i++){
+     if (g[i]%i==0) {pr=true;
+if (!true) {for (int f=0;f<d;f++)  {p[f]=g[i];
+     cout<<"element= "<<p[f]<<endl;
+}
+}
+}
+}
+cout<<"Array without repeats prime elements  "<<endl;
+for(int i=0; i<d; i++){
+cout<<p[i]<<endl;
+}
+
+return 0;
+}
