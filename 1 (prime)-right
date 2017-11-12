@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+int n;
+cout<<"Enter the number of elements  ";
+cin>>n;
+int a [n];
+for(int i=0;i<n;i++){
+cout<<"Enter the element  ";
+cin >> a[i];
+}
+int p[n];
+for (int i=0;i<n;i++){
+        if (a[i]==3||a[i]==2) p[i]=0;
+         for (int o=2; o*o<=a[i]; o++) {
+          if (a[i]%o==0) p[i]=1;
+          else p[i]=0;
+         }
+}
+int b[n];
+int t=0;
+for (int i=0;i<n;i++){
+if (p[i]==0) {
+    for (int j=i+1;j<n;j++)
+        if (a[i]==a[j]){
+        a[i]=0;
+        a[j]=0;
+        }
+}
+}
+cout<<endl;
+cout<< "Elements: "<<endl;
+for (int i=0;i<n;i++){
+ if (a[i]!=0)    cout<<a[i]<<endl;
+}
+return 0;
+}
