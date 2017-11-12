@@ -1,6 +1,4 @@
 #include <iostream>
-#include <math.h>
-
 using namespace std;
 
 int main(){
@@ -12,41 +10,38 @@ for(int i=0;i<n;i++){
 cout<<"Enter the element  ";
 cin >> a[i];
 }
-int k = 0;
-int g[k];
-int c = 0;
-int yu=0;
-    for(int i = 0; i < n; i++){
-       for(int j =i+1; j < n; j++){
-           if(i != j && a[i] == a[j])
-                 yu=1;
-       if(yu==1){
-            g[k] = a[i];
-            k++;
-            c++;
-          }
-    }
-    }
-cout<<"Array without repeats  "<<endl;
-int d=n-c+1;
-for (int i=0; i<d; i++){
-cout<<g[i]<<endl;
-}
-cout<<"d= "<<d<<endl;
-int p[d];
-bool pr;
-for (int i=2; i<(g[i]/2); i++){
-     if (g[i]%i==0) {pr=true;
-if (!true) {for (int f=0;f<d;f++)  {p[f]=g[i];
-     cout<<"element= "<<p[f]<<endl;
+int c = 1;
+int b[n];
+b[0]=a[0];
+int t=0;
+for (int i=0;i<n;i++){ bool yes = false;
+    for (int j=1;j<n;j++)
+        if (a[i]==b[j]) yes = true;
+    if (!yes){
+        t++;
+        b[t]=a[i];
+        c++;
 }
 }
-}
-}
-cout<<"Array without repeats prime elements  "<<endl;
-for(int i=0; i<d; i++){
-cout<<p[i]<<endl;
-}
+int p[c];
+t=1;
+int s=0;
+for (int i=1;i<c;i++){
+        if (b[i]==3||b[i]==2) p[i]=0;
+         for (int o=2; o*o<=b[i]; o++) {
+          if (b[i]%o==0) p[i]=1;
+          else p[i]=0;
 
+
+
+}
+}
+int g[c];
+cout<<endl;
+cout<< "Prime elements: "<<endl;
+for (int i=1;i<c;i++){
+    if (p[i]==0) {g[i-1]=b[i];
+    cout<<g[i-1]<<endl;}
+    }
 return 0;
 }
